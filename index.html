@@ -1,4 +1,230 @@
 <!doctype html>
-<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>maple-dawn</title>
-<style>body{margin:0;font:16px/1.7 -apple-system,"PingFang SC",sans-serif;padding:32px 16px;max-width:760px;margin:0 auto}a{color:#1e5bff}@media(prefers-color-scheme:dark){body{background:#0e0e10;color:#f2f2f7}a{color:#7ea2ff}}</style></head>
-<body><h1>maple-dawn</h1><h2>码赛 Masaic</h2><p><a href="masaic/privacy/">隐私政策 Privacy Policy</a> · <a href="masaic/support/">支持 Support</a></p><h2>拍书 BookFlat</h2><p><a href="bookflat/privacy/">隐私政策 Privacy Policy</a> · <a href="bookflat/support/">支持 Support</a></p><h2>Transory</h2><p><a href="transory/privacy/">隐私政策 Privacy Policy</a> · <a href="transory/support/">支持 Support</a></p></body></html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>maple-dawn · 独立开发者</title>
+<meta name="description" content="maple-dawn 的个人主页：独立开发的 iPhone App——码赛 Masaic、拍书 BookFlat、Transory。数据留在你的设备上。">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0e10" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e8642c'/%3E%3Cpath d='M32 12l5 10 8-4-2 10 9 2-8 7 4 6-9-1-1 10-6-5-6 5-1-10-9 1 4-6-8-7 9-2-2-10 8 4z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f6f5f2; --fg: #17171a; --muted: #66656c; --line: #e4e2dc;
+    --card: #ffffff; --card-hover: #fbfaf8; --accent: #e8642c; --accent-soft: #fbe6dc;
+    --shadow: 0 1px 2px rgba(20,20,30,.04), 0 8px 24px rgba(20,20,30,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e10; --fg: #f2f2f5; --muted: #a2a1a8; --line: #26262b;
+      --card: #17171a; --card-hover: #1c1c20; --accent: #ff8a55; --accent-soft: #3a2218;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  /* Nav */
+  nav { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px);
+        background: color-mix(in srgb, var(--bg) 78%, transparent); border-bottom: 1px solid transparent; }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 650; text-decoration: none; letter-spacing: -.01em; }
+  .brand svg { width: 28px; height: 28px; }
+  nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; font-size: 15px; }
+  nav ul a { text-decoration: none; color: var(--muted); }
+  nav ul a:hover { color: var(--fg); }
+
+  /* Hero */
+  .hero { padding: 72px 0 56px; }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); background: var(--accent-soft);
+             padding: 4px 12px; border-radius: 999px; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 18px; font-weight: 750; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { font-size: 18px; color: var(--muted); max-width: 600px; margin: 0; }
+  .hero p.en { font-size: 15px; margin-top: 10px; }
+
+  /* Sections */
+  section { padding: 36px 0; }
+  .sec-title { display: flex; align-items: baseline; gap: 10px; margin: 0 0 22px; }
+  .sec-title h2 { font-size: 24px; margin: 0; letter-spacing: -.01em; }
+  .sec-title small { color: var(--muted); font-size: 14px; }
+
+  /* App cards */
+  .apps { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .app { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px;
+         box-shadow: var(--shadow); display: flex; flex-direction: column; transition: transform .2s, background .2s; }
+  .app:hover { transform: translateY(-2px); background: var(--card-hover); }
+  .app .icon { width: 60px; height: 60px; border-radius: 14px; display: block; margin-bottom: 16px; }
+  .app h3 { margin: 0; font-size: 19px; letter-spacing: -.01em; }
+  .app .tag { color: var(--muted); font-size: 13px; margin: 2px 0 12px; }
+  .app p { margin: 0 0 18px; font-size: 15px; flex: 1; }
+  .app p .en { display: block; color: var(--muted); font-size: 13.5px; margin-top: 6px; line-height: 1.55; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .links a { font-size: 13.5px; text-decoration: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
+             color: var(--fg); transition: border-color .2s, color .2s; }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Principles */
+  .principles { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .principle { padding: 4px 0; }
+  .principle h3 { font-size: 16px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
+  .principle h3 i { font-style: normal; width: 28px; height: 28px; border-radius: 8px; background: var(--accent-soft); color: var(--accent);
+                    display: inline-grid; place-items: center; font-size: 15px; }
+  .principle p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+  /* Contact */
+  .contact { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: var(--shadow); }
+  .contact p { margin: 0 0 16px; color: var(--muted); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--fg); color: var(--bg); text-decoration: none;
+         padding: 10px 18px; border-radius: 12px; font-size: 15px; font-weight: 600; }
+  .btn svg { width: 18px; height: 18px; }
+
+  footer { padding: 40px 0 56px; color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 560px) {
+    nav ul { gap: 16px; }
+    .hero { padding: 48px 0 36px; }
+    .hero p { font-size: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .app { transition: none; } .app:hover { transform: none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#e8642c"/><path d="M32 12l5 10 8-4-2 10 9 2-8 7 4 6-9-1-1 10-6-5-6 5-1-10-9 1 4-6-8-7 9-2-2-10 8 4z" fill="#fff"/></svg>
+      maple-dawn
+    </a>
+    <ul>
+      <li><a href="#apps">作品</a></li>
+      <li><a href="#about">理念</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="hero">
+    <span class="eyebrow">独立开发者 · Indie Developer</span>
+    <h1>做小而好用的 App，<br>把<span>数据留在你的设备上</span>。</h1>
+    <p>你好，我是 maple-dawn。我为 iPhone 制作专注、简洁、尊重隐私的小工具：本地处理，不建账号，不追踪。</p>
+    <p class="en">Hi, I'm maple-dawn. I build focused, privacy-first iPhone apps — on-device processing, no accounts, no tracking.</p>
+  </header>
+
+  <section id="apps">
+    <div class="sec-title"><h2>作品</h2><small>Apps</small></div>
+    <div class="apps">
+
+      <article class="app">
+        <svg class="icon" viewBox="0 0 52 52" aria-hidden="true">
+          <rect width="52" height="52" rx="13" fill="#1e5bff"/>
+          <g fill="#ffffff">
+            <rect x="11" y="11" width="9" height="9" rx="2"/><rect x="21.5" y="11" width="9" height="9" rx="2" opacity=".55"/><rect x="32" y="11" width="9" height="9" rx="2"/>
+            <rect x="11" y="21.5" width="9" height="9" rx="2" opacity=".55"/><rect x="21.5" y="21.5" width="9" height="9" rx="2"/><rect x="32" y="21.5" width="9" height="9" rx="2" opacity=".55"/>
+            <rect x="11" y="32" width="9" height="9" rx="2"/><rect x="21.5" y="32" width="9" height="9" rx="2" opacity=".55"/><rect x="32" y="32" width="9" height="9" rx="2"/>
+          </g>
+        </svg>
+        <h3>码赛 Masaic</h3>
+        <div class="tag">截图隐私打码 · iPhone</div>
+        <p>自动识别截图里的隐私信息并一键打码，所有识别都在 iPhone 上完成，开飞行模式也能用。
+          <span class="en">Detect and redact private info in screenshots — entirely on-device.</span></p>
+        <div class="links">
+          <a href="masaic/privacy/">隐私政策 Privacy</a>
+          <a href="masaic/support/">支持 Support</a>
+        </div>
+      </article>
+
+      <article class="app">
+        <svg class="icon" viewBox="0 0 52 52" aria-hidden="true">
+          <rect width="52" height="52" rx="13" fill="#c23a22"/>
+          <g fill="none" stroke="#fbf3e6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 15V9h6M37 9h6v6M43 37v6h-6M15 43H9v-6"/>
+          </g>
+          <rect x="13" y="17" width="12.5" height="18" rx="1.5" fill="#fffbf3"/>
+          <rect x="26.5" y="17" width="12.5" height="18" rx="1.5" fill="#fffbf3"/>
+          <g stroke="#d9b9a6" stroke-width="1.4" stroke-linecap="round">
+            <path d="M15.5 21.5h7M15.5 25h7M15.5 28.5h5M29 21.5h7.5M29 25h7.5M29 28.5h5"/>
+          </g>
+        </svg>
+        <h3>拍书 BookFlat</h3>
+        <div class="tag">书页扫描 · 展平 · 识字</div>
+        <p>拍下书页，自动展平裁剪、拆分双页、识别文字并导出 PDF。全部在本地完成，书页不会上传。
+          <span class="en">Scan, flatten and OCR book pages, then export to PDF — all on your iPhone.</span></p>
+        <div class="links">
+          <a href="bookflat/privacy/">隐私政策 Privacy</a>
+          <a href="bookflat/support/">支持 Support</a>
+        </div>
+      </article>
+
+      <article class="app">
+        <svg class="icon" viewBox="0 0 52 52" aria-hidden="true">
+          <rect width="52" height="52" rx="13" fill="#4b5bff"/>
+          <rect x="9" y="11" width="22" height="18" rx="5" fill="#ffffff"/>
+          <path d="M14 29l-1 6 7-6z" fill="#ffffff"/>
+          <rect x="21" y="23" width="22" height="18" rx="5" fill="#c9cfff"/>
+          <path d="M38 41l1 5-7-5z" fill="#c9cfff"/>
+          <path d="M15 24l5-9 5 9M16.8 21h6.4" fill="none" stroke="#4b5bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M27 28h10M32 26v2M29.5 28c.8 3.5 3.5 6 7 7.5M34.5 28c-.8 3.5-3.5 6-7 7.5" fill="none" stroke="#2b38c9" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <h3>Transory</h3>
+        <div class="tag">AI 翻译 · 同传 · iPhone</div>
+        <p>用你自己的 API Key 接入 DeepSeek、Claude、Gemini 或 OpenAI 进行翻译。没有开发者服务器，内容只发给你授权的服务商。
+          <span class="en">AI translation with your own API key. No developer servers, ever.</span></p>
+        <div class="links">
+          <a href="transory/privacy/">隐私政策 Privacy</a>
+          <a href="transory/support/">支持 Support</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-title"><h2>理念</h2><small>Principles</small></div>
+    <div class="principles">
+      <div class="principle">
+        <h3><i>⌂</i>本地优先</h3>
+        <p>能在设备上完成的事，就不上传。离线也能用。</p>
+      </div>
+      <div class="principle">
+        <h3><i>◎</i>不收集数据</h3>
+        <p>没有账号体系、没有统计 SDK、没有广告追踪。</p>
+      </div>
+      <div class="principle">
+        <h3><i>✦</i>小而专注</h3>
+        <p>每个 App 只把一件事做好，界面简单，打开即用。</p>
+      </div>
+      <div class="principle">
+        <h3><i>¥</i>先试用，再决定</h3>
+        <p>先免费试用，满意再购买，试用到期不会自动扣款。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-title"><h2>联系</h2><small>Contact</small></div>
+    <div class="contact">
+      <p>遇到问题、有功能建议，或者只是想打个招呼，欢迎在 GitHub 留言。<br>Questions, ideas or feedback? Open an issue on GitHub.</p>
+      <a class="btn" href="https://github.com/maple-dawn/maple-dawn.github.io/issues">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub Issues
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> maple-dawn · Made with care.</div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
