@@ -1,108 +1,241 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Transory for iPhone 隐私政策 · Privacy Policy</title>
+<title>Transory for iPhone · 隐私政策 Privacy Policy</title>
+<meta name="description" content="Transory for iPhone 隐私政策：没有开发者服务器，内容只从你的设备直接发送给你授权的 AI 服务商，我们不收集任何数据。">
 <style>
-  :root { --bg: #ffffff; --fg: #1c1c1e; --muted: #6c6c70; --line: #e5e5ea; --accent: #4b5bff; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #000000; --fg: #f2f2f7; --muted: #a1a1a6; --line: #2c2c2e; --accent: #7c88ff; } }
-  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 -apple-system, "PingFang SC", system-ui, sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-  h1 { font-size: 28px; margin: 0 0 4px; }
-  h2 { font-size: 19px; margin: 32px 0 8px; }
+  :root { --fg:#1c1c1e; --muted:#6c6c70; --bg:#f4f5fb; --card:#fff; --accent:#4b5bff; --line:#e3e5f0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --muted:#a1a1a6; --bg:#0d0e14; --card:#1b1c24; --accent:#7c88ff; --line:#2c2e3a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", "Noto Sans CJK", "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom: 20px; }
+  .mark { width:52px; height:52px; border-radius:13px; flex-shrink:0; display:block; }
+  h1 { font-size: 24px; margin:0; line-height:1.3; }
+  .sub { color:var(--muted); font-size:14px; margin:2px 0 0; }
+  nav { display:flex; flex-wrap:wrap; gap:8px; margin: 8px 0 24px; }
+  nav a { color:var(--accent); text-decoration:none; font-size:14px; padding:6px 12px; border:1px solid var(--line);
+    border-radius:999px; background:var(--card); }
+  section { background:var(--card); border-radius:16px; padding: 8px 22px 18px; margin-bottom: 20px; }
+  h2 { font-size: 20px; margin: 18px 0 4px; }
+  h3 { font-size: 16px; margin: 18px 0 2px; }
   p, li { margin: 6px 0; }
-  .meta { color: var(--muted); font-size: 14px; }
-  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+  ul { padding-left: 1.2em; }
+  .muted { color: var(--muted); font-size: 14px; }
   a { color: var(--accent); }
-  .lang { text-align: right; font-size: 14px; margin: 0 0 16px; }
 </style>
 </head>
 <body>
 <main>
-<p class="lang"><a href="#zh">简体中文</a></p>
-<h1>Transory for iPhone Privacy Policy</h1>
-<p class="meta">Effective date: October 26, 2026</p>
+  <header>
+    <svg class="mark" viewBox="0 0 52 52" aria-hidden="true">
+      <rect width="52" height="52" rx="13" fill="#4b5bff"/>
+      <rect x="9" y="11" width="22" height="18" rx="5" fill="#ffffff"/>
+      <path d="M14 29l-1 6 7-6z" fill="#ffffff"/>
+      <rect x="21" y="23" width="22" height="18" rx="5" fill="#c9cfff"/>
+      <path d="M38 41l1 5-7-5z" fill="#c9cfff"/>
+      <path d="M15 24l5-9 5 9M16.8 21h6.4" fill="none" stroke="#4b5bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M27 28h10M32 26v2M29.5 28c.8 3.5 3.5 6 7 7.5M34.5 28c-.8 3.5-3.5 6-7 7.5" fill="none" stroke="#2b38c9" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <h1>Transory for iPhone 隐私政策</h1>
+      <p class="sub">生效日期 / Effective: 2026-11-10</p>
+    </div>
+  </header>
 
-<p>Transory is a translation app that uses AI services you configure yourself (for example DeepSeek, Claude, Gemini, OpenAI, or a local model running on your own network). Transory has no servers of its own, and the developer does not collect, store, or view any of your content.</p>
+  <nav aria-label="Language">
+    <a href="#zh-hans">简体中文</a>
+    <a href="#en">English</a>
+    <a href="#zh-hant">繁體中文</a>
+    <a href="#ja">日本語</a>
+  </nav>
 
-<h2>What is sent, and to whom</h2>
-<ul>
-  <li><strong>Content:</strong> the text you type or paste for translation, and text recognized on your device from photos you take. Photos themselves are never uploaded.</li>
-  <li><strong>Recipients:</strong> only the AI providers you add, configure with your own API key, and explicitly authorize on the data-sharing consent screen. Providers you have not authorized receive nothing.</li>
-  <li><strong>How:</strong> content is sent directly from your device to the provider over an encrypted connection (HTTPS), never through any server operated by the developer. When you use a local model on your network, content stays on your local network.</li>
-  <li><strong>Provider handling:</strong> each provider processes content under its own privacy policy, linked from the consent screen and from Settings › Data &amp; Privacy.</li>
-</ul>
+  <section id="zh-hans" lang="zh-Hans">
+    <h2>简体中文</h2>
+    <p>Transory（以下称“本应用”）是一款翻译应用，使用你自己配置的 AI 服务（例如 DeepSeek、Claude、Gemini、OpenAI，或你在局域网中运行的本地模型）进行翻译。我们的原则很简单：<strong>本应用没有自己的服务器，开发者不会收集、存储或查看你的任何内容。</strong></p>
 
-<h2>Data stored on your device</h2>
-<ul>
-  <li><strong>API keys</strong> are stored in the device Keychain and used only to call the matching provider.</li>
-  <li><strong>Translation history and favorites</strong> stay on your device and can be deleted at any time.</li>
-  <li><strong>Settings</strong> (services, scenes, consent status) are stored locally.</li>
-</ul>
+    <h3>1. 我们不收集任何数据</h3>
+    <p>开发者不收集、不存储、也不与任何第三方分享你的任何个人信息、翻译内容或使用数据。本应用没有账号系统，不包含广告、统计分析、崩溃上报或任何第三方追踪 SDK，不读取设备标识符，也不会跨应用或网站追踪你。</p>
 
-<h2>What we don't do</h2>
-<ul>
-  <li>No analytics, crash reporting, or device identifiers.</li>
-  <li>No advertising and no tracking across apps or websites.</li>
-  <li>We do not sell or share your data.</li>
-</ul>
+    <h3>2. 我们发送什么、发给谁</h3>
+    <ul>
+      <li><strong>发送的内容：</strong>你输入或粘贴的要翻译的文字，以及拍照后在设备上识别出的文字。照片本身不会上传。</li>
+      <li><strong>接收方：</strong>只有你在应用中添加、填写了自己的 API Key、并在“数据发送同意”页面勾选授权的 AI 服务商。没有授权的服务不会收到任何内容。</li>
+      <li><strong>发送方式：</strong>内容通过加密连接（HTTPS）从你的设备直接发送给服务商，不经过开发者的任何服务器。连接局域网中的本地模型时，内容只在你的本地网络中传输。</li>
+      <li><strong>服务商如何处理：</strong>由各服务商按照其自己的隐私政策处理。你可以在应用的同意页面或“设置 › 数据与隐私”中查看各服务商的隐私政策链接。</li>
+    </ul>
 
-<h2>Camera and local network</h2>
-<p>The camera is used only when you choose photo translation; text recognition runs on device. Local network access is used only to reach Ollama or LM Studio running on your own computer.</p>
+    <h3>3. 我们会请求的权限</h3>
+    <ul>
+      <li><strong>相机：</strong>仅在你使用“拍照翻译”时启用。文字识别在设备上完成，照片不会上传。</li>
+      <li><strong>本地网络：</strong>仅用于连接你自己在同一网络中运行的 Ollama 或 LM Studio。你可以拒绝，不影响使用云端 AI 服务。</li>
+    </ul>
 
-<h2>Your choices</h2>
-<p>You can revoke any provider's authorization in Settings › Data &amp; Privacy › AI Service Data Authorization, or turn on "Confirm before each send" to review the text and recipients before every translation.</p>
+    <h3>4. 保存在你设备上的内容</h3>
+    <ul>
+      <li><strong>API Key：</strong>保存在设备的钥匙串（Keychain）中，只用于向对应服务商发起请求。</li>
+      <li><strong>翻译历史与收藏：</strong>只保存在你的设备上，你可以随时在“历史”中删除。</li>
+      <li><strong>设置：</strong>服务列表、使用场景和授权状态保存在设备本地。</li>
+    </ul>
+    <p>删除本应用会同时删除以上本地数据（钥匙串中的 API Key 可能由系统保留到下次重装，你可以在删除前于设置中清除）。</p>
 
-<h2>Children</h2>
-<p>Transory is not directed to children under 13 and does not knowingly collect personal information from children.</p>
+    <h3>5. 你的选择</h3>
+    <p>你可以随时在“设置 › 数据与隐私 › AI 服务数据授权”中撤回对任一服务的授权，或打开“每次发送前确认”，在每次翻译前确认要发送的内容和接收方。</p>
 
-<h2>Changes and contact</h2>
-<p>We will update this page and its effective date if this policy changes. For questions, contact us via <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a>.</p>
+    <h3>6. 购买</h3>
+    <p>“7 天免费试用”和“永久解锁”通过 Apple 的 App Store 内购完成。付款与购买记录由 Apple 处理，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。我们无法获取你的付款信息或 Apple ID。</p>
 
-<hr>
+    <h3>7. 儿童隐私</h3>
+    <p>本应用不面向 13 岁以下儿童，也不会有意收集儿童的个人信息。</p>
 
-<section id="zh" lang="zh-CN">
-<h1>Transory for iPhone 隐私政策</h1>
-<p class="meta">生效日期：2026 年 10 月 26 日</p>
+    <h3>8. 政策变更</h3>
+    <p>如果本政策有更新，我们会修改本页面并更新上方的生效日期。如果将来的版本需要收集任何数据，我们会在应用内明确告知并征得你的同意。</p>
 
-<p>Transory 是一款翻译 App，使用你自己配置的 AI 服务（例如 DeepSeek、Claude、Gemini、OpenAI，或你在局域网中运行的本地模型）进行翻译。Transory 没有自己的服务器，开发者不会收集、存储或查看你的任何内容。</p>
+    <h3>9. 联系我们</h3>
+    <p>如有任何问题，请在这里留言：<a href="https://github.com/maple-dawn/Transory/issues">github.com/maple-dawn/Transory/issues</a></p>
+  </section>
 
-<h2>我们发送什么、发给谁</h2>
-<ul>
-  <li><strong>发送的内容：</strong>你输入或粘贴的要翻译的文字，以及拍照后在设备上识别出的文字。照片本身不会上传。</li>
-  <li><strong>接收方：</strong>只有你在 App 中添加、填写了 API Key、并在「数据发送同意」页面勾选授权的 AI 服务商。没有授权的服务不会收到任何内容。</li>
-  <li><strong>发送方式：</strong>内容通过加密连接（HTTPS）从你的设备直接发送给服务商，不经过开发者的任何服务器。连接局域网中的本地模型时，内容只在你的本地网络中传输。</li>
-  <li><strong>服务商如何处理：</strong>由各服务商按照其自己的隐私政策处理。你可以在 App 的同意页面或「设置 › 数据与隐私」中查看各服务商的隐私政策链接。</li>
-</ul>
+  <section id="en" lang="en">
+    <h2>English</h2>
+    <p>Transory (“the app”) is a translation app that uses AI services you configure yourself (for example DeepSeek, Claude, Gemini, OpenAI, or a local model running on your own network). Our principle is simple: <strong>the app has no servers of its own, and the developer never collects, stores, or views any of your content.</strong></p>
 
-<h2>保存在你设备上的数据</h2>
-<ul>
-  <li><strong>API Key：</strong>保存在设备的钥匙串（Keychain）中，只用于向对应服务商发起请求。</li>
-  <li><strong>翻译历史与收藏：</strong>只保存在你的设备上，你可以随时在「历史」中删除。</li>
-  <li><strong>设置：</strong>服务列表、使用场景和授权状态保存在设备本地。</li>
-</ul>
-<p>删除 App 会同时删除以上本地数据（钥匙串中的 API Key 可能由系统保留到下次重装，你可以在删除前于设置中清除）。</p>
+    <h3>1. We collect no data</h3>
+    <p>The developer does not collect, store, or share with any third party any personal information, translated content, or usage data. There are no accounts, no ads, no analytics, no crash reporting, and no third-party tracking SDKs. The app does not read device identifiers and does not track you across apps or websites.</p>
 
-<h2>我们不做的事</h2>
-<ul>
-  <li>不收集分析数据、崩溃日志或设备标识符。</li>
-  <li>不使用广告，不跨 App 或网站追踪你。</li>
-  <li>不出售或共享你的数据。</li>
-</ul>
+    <h3>2. What is sent, and to whom</h3>
+    <ul>
+      <li><strong>Content:</strong> the text you type or paste for translation, and text recognized on your device from photos you take. Photos themselves are never uploaded.</li>
+      <li><strong>Recipients:</strong> only the AI providers you add, configure with your own API key, and explicitly authorize on the data-sharing consent screen. Providers you have not authorized receive nothing.</li>
+      <li><strong>How:</strong> content is sent directly from your device to the provider over an encrypted connection (HTTPS), never through any server operated by the developer. When you use a local model on your network, content stays on your local network.</li>
+      <li><strong>Provider handling:</strong> each provider processes content under its own privacy policy, linked from the consent screen and from Settings › Data &amp; Privacy.</li>
+    </ul>
 
-<h2>相机与本地网络</h2>
-<p>相机只在你使用「拍照翻译」时启用，文字识别在设备上完成。本地网络权限只用于连接你自己在同一网络中运行的 Ollama 或 LM Studio。</p>
+    <h3>3. Permissions we ask for</h3>
+    <ul>
+      <li><strong>Camera:</strong> used only when you choose photo translation. Text recognition runs on device, and photos are never uploaded.</li>
+      <li><strong>Local Network:</strong> used only to reach Ollama or LM Studio running on your own computer. You may decline; cloud AI services work the same.</li>
+    </ul>
 
-<h2>你的选择</h2>
-<p>你可以随时在「设置 › 数据与隐私 › AI 服务数据授权」中撤回对任一服务的授权，或打开「每次发送前确认」，在每次翻译前确认要发送的内容和接收方。</p>
+    <h3>4. What is stored on your device</h3>
+    <ul>
+      <li><strong>API keys</strong> are stored in the device Keychain and used only to call the matching provider.</li>
+      <li><strong>Translation history and favorites</strong> stay on your device and can be deleted at any time in History.</li>
+      <li><strong>Settings</strong> (services, scenes, consent status) are stored locally.</li>
+    </ul>
+    <p>Deleting the app deletes this local data. (The system may keep API keys in the Keychain until you reinstall; you can clear them in Settings before deleting the app.)</p>
 
-<h2>儿童</h2>
-<p>Transory 不面向 13 岁以下儿童，也不会有意收集儿童的个人信息。</p>
+    <h3>5. Your choices</h3>
+    <p>You can revoke any provider’s authorization at any time in Settings › Data &amp; Privacy › AI Service Data Authorization, or turn on “Confirm before each send” to review the text and recipients before every translation.</p>
 
-<h2>政策变更与联系方式</h2>
-<p>本政策如有变更，会更新此页面并修改生效日期。如有问题，请通过 <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a> 联系我们。</p>
-</section>
+    <h3>6. Purchases</h3>
+    <p>The 7-day free trial and the lifetime unlock are App Store in-app purchases. Payment and purchase records are handled by Apple under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. We never receive your payment details or Apple ID.</p>
+
+    <h3>7. Children’s privacy</h3>
+    <p>The app is not directed to children under 13 and does not knowingly collect personal information from children.</p>
+
+    <h3>8. Changes</h3>
+    <p>If this policy changes, we will update this page and the effective date above. If a future version ever needs to collect any data, we will tell you clearly in the app and ask for your consent first.</p>
+
+    <h3>9. Contact</h3>
+    <p>Questions? Contact us at <a href="https://github.com/maple-dawn/Transory/issues">github.com/maple-dawn/Transory/issues</a>.</p>
+  </section>
+
+  <section id="zh-hant" lang="zh-Hant">
+    <h2>繁體中文</h2>
+    <p>Transory（以下稱「本應用」）是一款翻譯應用，使用你自己設定的 AI 服務（例如 DeepSeek、Claude、Gemini、OpenAI，或你在區域網路中執行的本機模型）進行翻譯。我們的原則很簡單：<strong>本應用沒有自己的伺服器，開發者不會收集、儲存或查看你的任何內容。</strong></p>
+
+    <h3>1. 我們不收集任何資料</h3>
+    <p>開發者不收集、不儲存，也不與任何第三方分享你的任何個人資訊、翻譯內容或使用資料。本應用沒有帳號系統，不包含廣告、統計分析、當機回報或任何第三方追蹤 SDK，不讀取裝置識別碼，也不會跨應用或網站追蹤你。</p>
+
+    <h3>2. 我們傳送什麼、傳給誰</h3>
+    <ul>
+      <li><strong>傳送的內容：</strong>你輸入或貼上的要翻譯的文字，以及拍照後在裝置上辨識出的文字。照片本身不會上傳。</li>
+      <li><strong>接收方：</strong>只有你在應用中新增、填寫了自己的 API Key，並在「資料傳送同意」頁面勾選授權的 AI 服務商。沒有授權的服務不會收到任何內容。</li>
+      <li><strong>傳送方式：</strong>內容透過加密連線（HTTPS）從你的裝置直接傳送給服務商，不經過開發者的任何伺服器。連接區域網路中的本機模型時，內容只在你的本地網路中傳輸。</li>
+      <li><strong>服務商如何處理：</strong>由各服務商依照其自己的隱私權政策處理。你可以在應用的同意頁面或「設定 › 資料與隱私」中查看各服務商的隱私權政策連結。</li>
+    </ul>
+
+    <h3>3. 我們會請求的權限</h3>
+    <ul>
+      <li><strong>相機：</strong>僅在你使用「拍照翻譯」時啟用。文字辨識在裝置上完成，照片不會上傳。</li>
+      <li><strong>本地網路：</strong>僅用於連接你自己在同一網路中執行的 Ollama 或 LM Studio。你可以拒絕，不影響使用雲端 AI 服務。</li>
+    </ul>
+
+    <h3>4. 保存在你裝置上的內容</h3>
+    <ul>
+      <li><strong>API Key：</strong>保存在裝置的鑰匙圈（Keychain）中，只用於向對應服務商發出請求。</li>
+      <li><strong>翻譯紀錄與收藏：</strong>只保存在你的裝置上，你可以隨時在「紀錄」中刪除。</li>
+      <li><strong>設定：</strong>服務列表、使用情境和授權狀態保存在裝置本機。</li>
+    </ul>
+    <p>刪除本應用會同時刪除以上本機資料（鑰匙圈中的 API Key 可能由系統保留到下次重新安裝，你可以在刪除前於設定中清除）。</p>
+
+    <h3>5. 你的選擇</h3>
+    <p>你可以隨時在「設定 › 資料與隱私 › AI 服務資料授權」中撤回對任一服務的授權，或開啟「每次傳送前確認」，在每次翻譯前確認要傳送的內容和接收方。</p>
+
+    <h3>6. 購買</h3>
+    <p>「7 天免費試用」和「永久解鎖」透過 Apple 的 App Store 內購完成。付款與購買紀錄由 Apple 處理，適用 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>。我們無法取得你的付款資訊或 Apple ID。</p>
+
+    <h3>7. 兒童隱私</h3>
+    <p>本應用不以 13 歲以下兒童為對象，也不會有意收集兒童的個人資訊。</p>
+
+    <h3>8. 政策變更</h3>
+    <p>如果本政策有更新，我們會修改本頁面並更新上方的生效日期。如果未來的版本需要收集任何資料，我們會在應用內明確告知並徵得你的同意。</p>
+
+    <h3>9. 聯絡我們</h3>
+    <p>如有任何問題，請在這裡留言：<a href="https://github.com/maple-dawn/Transory/issues">github.com/maple-dawn/Transory/issues</a></p>
+  </section>
+
+  <section id="ja" lang="ja">
+    <h2>日本語</h2>
+    <p>Transory（以下「本アプリ」）は、あなた自身が設定した AI サービス（DeepSeek、Claude、Gemini、OpenAI、または自分のネットワーク上で動くローカルモデルなど）を使って翻訳するアプリです。私たちの方針はシンプルです：<strong>本アプリは独自のサーバーを持たず、開発者があなたのコンテンツを収集・保存・閲覧することはありません。</strong></p>
+
+    <h3>1. データは一切収集しません</h3>
+    <p>開発者は、個人情報・翻訳内容・利用データを収集、保存、または第三者と共有することはありません。アカウント機能、広告、アクセス解析、クラッシュレポート、第三者のトラッキング SDK は含まれておらず、デバイス識別子の読み取りや、アプリ・ウェブサイトをまたいだトラッキングも行いません。</p>
+
+    <h3>2. 何を、誰に送信するか</h3>
+    <ul>
+      <li><strong>送信する内容：</strong>翻訳のために入力・貼り付けたテキストと、撮影した写真から端末内で認識したテキストです。写真そのものはアップロードされません。</li>
+      <li><strong>送信先：</strong>アプリに追加し、ご自身の API キーを設定し、「データ送信の同意」画面で明示的に許可した AI サービスのみです。許可していないサービスには何も送信されません。</li>
+      <li><strong>送信方法：</strong>内容は暗号化された接続（HTTPS）で端末からサービスへ直接送信され、開発者のサーバーを経由することはありません。ローカルネットワーク上のローカルモデルを使う場合、内容はローカルネットワーク内にとどまります。</li>
+      <li><strong>サービス側での取り扱い：</strong>各サービスのプライバシーポリシーに従って処理されます。リンクは同意画面と「設定 › データとプライバシー」から確認できます。</li>
+    </ul>
+
+    <h3>3. 求めるアクセス許可</h3>
+    <ul>
+      <li><strong>カメラ：</strong>「写真で翻訳」を使うときにのみ使用します。文字認識は端末内で行われ、写真はアップロードされません。</li>
+      <li><strong>ローカルネットワーク：</strong>ご自身のコンピュータで動作する Ollama や LM Studio に接続するためにのみ使用します。許可しなくても、クラウドの AI サービスは同じように利用できます。</li>
+    </ul>
+
+    <h3>4. 端末に保存される内容</h3>
+    <ul>
+      <li><strong>API キー：</strong>端末のキーチェーンに保存され、対応するサービスへのリクエストにのみ使用されます。</li>
+      <li><strong>翻訳履歴とお気に入り：</strong>端末内にのみ保存され、「履歴」からいつでも削除できます。</li>
+      <li><strong>設定：</strong>サービス一覧、シーン、同意状況は端末内に保存されます。</li>
+    </ul>
+    <p>アプリを削除すると、これらのローカルデータも削除されます（キーチェーン内の API キーは再インストールまでシステムに残る場合があります。削除前に設定から消去できます）。</p>
+
+    <h3>5. あなたの選択</h3>
+    <p>「設定 › データとプライバシー › AI サービスのデータ送信許可」で、いつでも任意のサービスへの許可を取り消せます。また「送信前に毎回確認」をオンにすると、翻訳のたびに送信内容と送信先を確認できます。</p>
+
+    <h3>6. 購入について</h3>
+    <p>「7日間無料体験」と「永久に解除」は App Store のアプリ内課金で提供されます。支払いと購入履歴は Apple が処理し、<a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>が適用されます。私たちが支払い情報や Apple ID を受け取ることはありません。</p>
+
+    <h3>7. 子どものプライバシー</h3>
+    <p>本アプリは 13 歳未満の子どもを対象としておらず、子どもの個人情報を意図的に収集することはありません。</p>
+
+    <h3>8. ポリシーの変更</h3>
+    <p>本ポリシーを変更する場合は、このページと上記の施行日を更新します。将来のバージョンでデータの収集が必要になる場合は、アプリ内で明確にお知らせし、事前に同意をいただきます。</p>
+
+    <h3>9. お問い合わせ</h3>
+    <p>ご質問はこちらからお寄せください：<a href="https://github.com/maple-dawn/Transory/issues">github.com/maple-dawn/Transory/issues</a></p>
+  </section>
+
+  <p class="muted">© 2026 Transory · <a href="../support/">支持 Support</a></p>
 </main>
 </body>
 </html>
