@@ -64,7 +64,7 @@
 
     <h3>2. 我们发送什么、发给谁</h3>
     <ul>
-      <li><strong>发送的内容：</strong>你输入或粘贴的要翻译的文字，以及拍照后在设备上识别出的文字。照片本身不会上传。</li>
+      <li><strong>发送的内容：</strong>你输入或粘贴的要翻译的文字、拍照后在设备上识别出的文字，以及使用“同传”时由语音识别出的文字。照片和录音本身不会发送给 AI 服务商。</li>
       <li><strong>接收方：</strong>只有你在应用中添加、填写了自己的 API Key、并在“数据发送同意”页面勾选授权的 AI 服务商。没有授权的服务不会收到任何内容。</li>
       <li><strong>发送方式：</strong>内容通过加密连接（HTTPS）从你的设备直接发送给服务商，不经过开发者的任何服务器。连接局域网中的本地模型时，内容只在你的本地网络中传输。</li>
       <li><strong>服务商如何处理：</strong>由各服务商按照其自己的隐私政策处理。你可以在应用的同意页面或“设置 › 数据与隐私”中查看各服务商的隐私政策链接。</li>
@@ -74,12 +74,13 @@
     <ul>
       <li><strong>相机：</strong>仅在你使用“拍照翻译”时启用。文字识别在设备上完成，照片不会上传。</li>
       <li><strong>本地网络：</strong>仅用于连接你自己在同一网络中运行的 Ollama 或 LM Studio。你可以拒绝，不影响使用云端 AI 服务。</li>
+      <li><strong>麦克风与语音识别：</strong>仅在你使用“同传”时启用，用来把说话内容转成文字。默认在设备上识别，录音不会离开你的设备；如果你在同传设置中改用“Apple 服务器识别”，语音会发送给 Apple 的语音识别服务处理，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。录音不会被保存，也不会发送给开发者或 AI 服务商。</li>
     </ul>
 
     <h3>4. 保存在你设备上的内容</h3>
     <ul>
       <li><strong>API Key：</strong>保存在设备的钥匙串（Keychain）中，只用于向对应服务商发起请求。</li>
-      <li><strong>翻译历史与收藏：</strong>只保存在你的设备上，你可以随时在“历史”中删除。</li>
+      <li><strong>翻译历史与收藏：</strong>只保存在你的设备上，你可以随时在“历史”中删除。同传记录只保存识别出的文字和译文，不保存录音。</li>
       <li><strong>设置：</strong>服务列表、使用场景和授权状态保存在设备本地。</li>
     </ul>
     <p>删除本应用会同时删除以上本地数据（钥匙串中的 API Key 可能由系统保留到下次重装，你可以在删除前于设置中清除）。</p>
@@ -109,7 +110,7 @@
 
     <h3>2. What is sent, and to whom</h3>
     <ul>
-      <li><strong>Content:</strong> the text you type or paste for translation, and text recognized on your device from photos you take. Photos themselves are never uploaded.</li>
+      <li><strong>Content:</strong> the text you type or paste for translation, text recognized on your device from photos you take, and text transcribed from speech when you use Live translation. Photos and audio recordings are never sent to AI providers.</li>
       <li><strong>Recipients:</strong> only the AI providers you add, configure with your own API key, and explicitly authorize on the data-sharing consent screen. Providers you have not authorized receive nothing.</li>
       <li><strong>How:</strong> content is sent directly from your device to the provider over an encrypted connection (HTTPS), never through any server operated by the developer. When you use a local model on your network, content stays on your local network.</li>
       <li><strong>Provider handling:</strong> each provider processes content under its own privacy policy, linked from the consent screen and from Settings › Data &amp; Privacy.</li>
@@ -119,12 +120,13 @@
     <ul>
       <li><strong>Camera:</strong> used only when you choose photo translation. Text recognition runs on device, and photos are never uploaded.</li>
       <li><strong>Local Network:</strong> used only to reach Ollama or LM Studio running on your own computer. You may decline; cloud AI services work the same.</li>
+      <li><strong>Microphone and Speech Recognition:</strong> used only when you use Live translation, to turn speech into text. By default speech is recognized on your device and audio never leaves it. If you switch to “Apple Server Recognition” in Live settings, audio is sent to Apple’s speech recognition service and handled under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. Recordings are never saved and never sent to the developer or to AI providers.</li>
     </ul>
 
     <h3>4. What is stored on your device</h3>
     <ul>
       <li><strong>API keys</strong> are stored in the device Keychain and used only to call the matching provider.</li>
-      <li><strong>Translation history and favorites</strong> stay on your device and can be deleted at any time in History.</li>
+      <li><strong>Translation history and favorites</strong> stay on your device and can be deleted at any time in History. Live translation records keep only the recognized text and translations, never audio.</li>
       <li><strong>Settings</strong> (services, scenes, consent status) are stored locally.</li>
     </ul>
     <p>Deleting the app deletes this local data. (The system may keep API keys in the Keychain until you reinstall; you can clear them in Settings before deleting the app.)</p>
@@ -154,7 +156,7 @@
 
     <h3>2. 我們傳送什麼、傳給誰</h3>
     <ul>
-      <li><strong>傳送的內容：</strong>你輸入或貼上的要翻譯的文字，以及拍照後在裝置上辨識出的文字。照片本身不會上傳。</li>
+      <li><strong>傳送的內容：</strong>你輸入或貼上的要翻譯的文字、拍照後在裝置上辨識出的文字，以及使用「同步口譯」時由語音辨識出的文字。照片和錄音本身不會傳送給 AI 服務商。</li>
       <li><strong>接收方：</strong>只有你在應用中新增、填寫了自己的 API Key，並在「資料傳送同意」頁面勾選授權的 AI 服務商。沒有授權的服務不會收到任何內容。</li>
       <li><strong>傳送方式：</strong>內容透過加密連線（HTTPS）從你的裝置直接傳送給服務商，不經過開發者的任何伺服器。連接區域網路中的本機模型時，內容只在你的本地網路中傳輸。</li>
       <li><strong>服務商如何處理：</strong>由各服務商依照其自己的隱私權政策處理。你可以在應用的同意頁面或「設定 › 資料與隱私」中查看各服務商的隱私權政策連結。</li>
@@ -164,12 +166,13 @@
     <ul>
       <li><strong>相機：</strong>僅在你使用「拍照翻譯」時啟用。文字辨識在裝置上完成，照片不會上傳。</li>
       <li><strong>本地網路：</strong>僅用於連接你自己在同一網路中執行的 Ollama 或 LM Studio。你可以拒絕，不影響使用雲端 AI 服務。</li>
+      <li><strong>麥克風與語音辨識：</strong>僅在你使用「同步口譯」時啟用，用來把說話內容轉成文字。預設在裝置上辨識，錄音不會離開你的裝置；如果你在同步口譯設定中改用「Apple 伺服器辨識」，語音會傳送給 Apple 的語音辨識服務處理，適用 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>。錄音不會被保存，也不會傳送給開發者或 AI 服務商。</li>
     </ul>
 
     <h3>4. 保存在你裝置上的內容</h3>
     <ul>
       <li><strong>API Key：</strong>保存在裝置的鑰匙圈（Keychain）中，只用於向對應服務商發出請求。</li>
-      <li><strong>翻譯紀錄與收藏：</strong>只保存在你的裝置上，你可以隨時在「紀錄」中刪除。</li>
+      <li><strong>翻譯紀錄與收藏：</strong>只保存在你的裝置上，你可以隨時在「紀錄」中刪除。同步口譯紀錄只保存辨識出的文字和譯文，不保存錄音。</li>
       <li><strong>設定：</strong>服務列表、使用情境和授權狀態保存在裝置本機。</li>
     </ul>
     <p>刪除本應用會同時刪除以上本機資料（鑰匙圈中的 API Key 可能由系統保留到下次重新安裝，你可以在刪除前於設定中清除）。</p>
@@ -199,7 +202,7 @@
 
     <h3>2. 何を、誰に送信するか</h3>
     <ul>
-      <li><strong>送信する内容：</strong>翻訳のために入力・貼り付けたテキストと、撮影した写真から端末内で認識したテキストです。写真そのものはアップロードされません。</li>
+      <li><strong>送信する内容：</strong>翻訳のために入力・貼り付けたテキスト、撮影した写真から端末内で認識したテキスト、そして「同時通訳」の利用時に音声から認識したテキストです。写真や録音そのものが AI サービスに送信されることはありません。</li>
       <li><strong>送信先：</strong>アプリに追加し、ご自身の API キーを設定し、「データ送信の同意」画面で明示的に許可した AI サービスのみです。許可していないサービスには何も送信されません。</li>
       <li><strong>送信方法：</strong>内容は暗号化された接続（HTTPS）で端末からサービスへ直接送信され、開発者のサーバーを経由することはありません。ローカルネットワーク上のローカルモデルを使う場合、内容はローカルネットワーク内にとどまります。</li>
       <li><strong>サービス側での取り扱い：</strong>各サービスのプライバシーポリシーに従って処理されます。リンクは同意画面と「設定 › データとプライバシー」から確認できます。</li>
@@ -209,12 +212,13 @@
     <ul>
       <li><strong>カメラ：</strong>「写真で翻訳」を使うときにのみ使用します。文字認識は端末内で行われ、写真はアップロードされません。</li>
       <li><strong>ローカルネットワーク：</strong>ご自身のコンピュータで動作する Ollama や LM Studio に接続するためにのみ使用します。許可しなくても、クラウドの AI サービスは同じように利用できます。</li>
+      <li><strong>マイクと音声認識：</strong>「同時通訳」を使うときにのみ使用し、話した内容をテキストに変換します。標準では端末内で認識され、音声が端末の外に出ることはありません。同時通訳の設定で「Apple サーバーで認識」に切り替えた場合、音声は Apple の音声認識サービスに送信され、<a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>に従って処理されます。録音は保存されず、開発者や AI サービスに送信されることもありません。</li>
     </ul>
 
     <h3>4. 端末に保存される内容</h3>
     <ul>
       <li><strong>API キー：</strong>端末のキーチェーンに保存され、対応するサービスへのリクエストにのみ使用されます。</li>
-      <li><strong>翻訳履歴とお気に入り：</strong>端末内にのみ保存され、「履歴」からいつでも削除できます。</li>
+      <li><strong>翻訳履歴とお気に入り：</strong>端末内にのみ保存され、「履歴」からいつでも削除できます。同時通訳の記録には認識したテキストと訳文のみが保存され、音声は保存されません。</li>
       <li><strong>設定：</strong>サービス一覧、シーン、同意状況は端末内に保存されます。</li>
     </ul>
     <p>アプリを削除すると、これらのローカルデータも削除されます（キーチェーン内の API キーは再インストールまでシステムに残る場合があります。削除前に設定から消去できます）。</p>
