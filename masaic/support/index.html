@@ -4,36 +4,97 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>码赛 Masaic · 支持 Support</title>
+<meta name="description" content="码赛 Masaic 支持页面：常见问题与反馈渠道。">
 <style>
-  :root { --fg:#111113; --muted:#5c5c63; --bg:#f5f5f7; --card:#fff; --accent:#1e5bff; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#f2f2f7; --muted:#a1a1a8; --bg:#0e0e10; --card:#1c1c1f; --accent:#7ea2ff; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  section { background:var(--card); border-radius:16px; padding:8px 22px 18px; margin-bottom:20px; }
-  h1 { font-size:24px; } h2 { font-size:18px; margin:18px 0 4px; } a { color:var(--accent); } .muted { color:var(--muted); font-size:14px; }
+  :root { --fg:#111113; --muted:#5c5c63; --bg:#f5f5f7; --card:#fff; --accent:#1e5bff; --line:#e5e5ea; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --muted:#a1a1a8; --bg:#0e0e10; --card:#1c1c1f; --accent:#7ea2ff; --line:#2a2a2e; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", "Noto Sans CJK", "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom: 20px; }
+  .mark { width:52px; height:52px; border-radius:13px; background:#1e5bff; display:grid;
+    grid-template-columns: repeat(3,1fr); gap:3px; padding:10px; flex-shrink:0; }
+  .mark span { border-radius:2px; background:#fff; }
+  .mark span:nth-child(even) { opacity:.45; }
+  h1 { font-size: 24px; margin:0; line-height:1.3; }
+  .sub { color:var(--muted); font-size:14px; margin:2px 0 0; }
+  nav { display:flex; flex-wrap:wrap; gap:8px; margin: 8px 0 24px; }
+  nav a { color:var(--accent); text-decoration:none; font-size:14px; padding:6px 12px; border:1px solid var(--line);
+    border-radius:999px; background:var(--card); }
+  section { background:var(--card); border-radius:16px; padding: 8px 22px 18px; margin-bottom: 20px; }
+  h2 { font-size: 20px; margin: 18px 0 4px; }
+  h3 { font-size: 16px; margin: 18px 0 2px; }
+  p, li { margin: 6px 0; }
+  ul { padding-left: 1.2em; }
+  .muted { color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
 </style>
 </head>
 <body>
 <main>
-  <h1>码赛 Masaic · 支持 / Support</h1>
-  <section lang="zh-Hans">
-    <h2>需要帮助？</h2>
+  <header>
+    <div class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div>
+      <h1>码赛 Masaic 支持</h1>
+      <p class="sub">常见问题与反馈 / FAQ &amp; Feedback</p>
+    </div>
+  </header>
+
+  <nav aria-label="Language">
+    <a href="#zh-hans">简体中文</a>
+    <a href="#en">English</a>
+    <a href="#zh-hant">繁體中文</a>
+    <a href="#ja">日本語</a>
+  </nav>
+
+  <section id="zh-hans" lang="zh-Hans">
+    <h2>简体中文</h2>
+    <h3>需要帮助？</h3>
     <p>遇到问题、识别不准，或有功能建议，请在这里留言：<a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub Issues</a>。请不要附上含有真实隐私信息的截图。</p>
-    <h2>常见问题</h2>
+    <h3>常见问题</h3>
     <p><strong>图片会上传吗？</strong> 不会。所有识别和打码都在 iPhone 上完成，开飞行模式也能用。</p>
     <p><strong>怎么恢复购买？</strong> 打开「设置 → 码赛完整版 → 恢复购买」。</p>
     <p><strong>试用到期会扣款吗？</strong> 不会。7 天试用结束后不会自动扣款，需要你主动购买才会解锁。</p>
-    <p><a href="../privacy/">隐私政策</a></p>
+    <p><a href="../privacy/#zh-hans">隐私政策</a></p>
   </section>
-  <section lang="en">
-    <h2>Need help?</h2>
-    <p>For problems, detection issues or feature requests, please open an issue on <a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub</a>. Please don't attach screenshots that contain real private information.</p>
+
+  <section id="en" lang="en">
+    <h2>English</h2>
+    <h3>Need help?</h3>
+    <p>For problems, detection issues or feature requests, please open an issue on <a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub</a>. Please don’t attach screenshots that contain real private information.</p>
+    <h3>FAQ</h3>
     <p><strong>Are my photos uploaded?</strong> No. Everything runs on your iPhone, even in Airplane Mode.</p>
     <p><strong>How do I restore my purchase?</strong> Settings → Masaic Full Version → Restore Purchase.</p>
     <p><strong>Will I be charged when the trial ends?</strong> No. The 7-day trial never charges automatically.</p>
     <p><a href="../privacy/#en">Privacy Policy</a></p>
   </section>
-  <p class="muted">© 2026 Masaic</p>
+
+  <section id="zh-hant" lang="zh-Hant">
+    <h2>繁體中文</h2>
+    <h3>需要協助？</h3>
+    <p>遇到問題、辨識不準，或有功能建議，請在這裡留言：<a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub Issues</a>。請不要附上含有真實隱私資訊的截圖。</p>
+    <h3>常見問題</h3>
+    <p><strong>圖片會上傳嗎？</strong> 不會。所有辨識和遮蓋都在 iPhone 上完成，開啟飛航模式也能使用。</p>
+    <p><strong>怎麼回復購買？</strong> 打開「設定 → 碼賽完整版 → 回復購買」。</p>
+    <p><strong>試用到期會扣款嗎？</strong> 不會。7 天試用結束後不會自動扣款，需要你主動購買才會解鎖。</p>
+    <p><a href="../privacy/#zh-hant">隱私政策</a></p>
+  </section>
+
+  <section id="ja" lang="ja">
+    <h2>日本語</h2>
+    <h3>お困りですか？</h3>
+    <p>不具合、検出の精度、機能のご要望などは <a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub Issues</a> からお寄せください。実際の個人情報が写ったスクリーンショットは添付しないでください。</p>
+    <h3>よくある質問</h3>
+    <p><strong>写真はアップロードされますか？</strong> いいえ。検出もモザイク処理もすべて iPhone 上で行われ、機内モードでも使えます。</p>
+    <p><strong>購入を復元するには？</strong> 「設定 → Masaic フルバージョン → 購入を復元」を開いてください。</p>
+    <p><strong>お試し期間が終わると課金されますか？</strong> いいえ。7 日間のお試しが終わっても自動で課金されることはありません。</p>
+    <p><a href="../privacy/#ja">プライバシーポリシー</a></p>
+  </section>
+
+  <p class="muted">© 2026 Masaic · <a href="../privacy/">隐私政策 Privacy</a></p>
 </main>
 </body>
 </html>

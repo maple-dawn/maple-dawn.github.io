@@ -6,22 +6,62 @@
 <title>拍书 BookFlat · 支持 Support</title>
 <meta name="description" content="拍书 BookFlat 支持页面：常见问题与反馈渠道。">
 <style>
-  :root { --fg:#1b1a17; --muted:#6b675f; --bg:#f6f4ef; --card:#fff; --accent:#c23a22; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#edeae3; --muted:#a39e94; --bg:#141413; --card:#1f1e1b; --accent:#f07a60; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  section { background:var(--card); border-radius:16px; padding:8px 22px 18px; margin-bottom:20px; }
-  h1 { font-size:24px; } h2 { font-size:18px; margin:18px 0 4px; } p { margin:6px 0; }
-  a { color:var(--accent); } .muted { color:var(--muted); font-size:14px; }
+  :root { --fg:#1b1a17; --muted:#6b675f; --bg:#f6f4ef; --card:#fff; --accent:#c23a22; --line:#e4e0d6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#edeae3; --muted:#a39e94; --bg:#141413; --card:#1f1e1b; --accent:#f07a60; --line:#34322d; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", "Noto Sans CJK", "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom: 20px; }
+  .mark { width:52px; height:52px; border-radius:13px; flex-shrink:0; display:block; }
+  h1 { font-size: 24px; margin:0; line-height:1.3; }
+  .sub { color:var(--muted); font-size:14px; margin:2px 0 0; }
+  nav { display:flex; flex-wrap:wrap; gap:8px; margin: 8px 0 24px; }
+  nav a { color:var(--accent); text-decoration:none; font-size:14px; padding:6px 12px; border:1px solid var(--line);
+    border-radius:999px; background:var(--card); }
+  section { background:var(--card); border-radius:16px; padding: 8px 22px 18px; margin-bottom: 20px; }
+  h2 { font-size: 20px; margin: 18px 0 4px; }
+  h3 { font-size: 16px; margin: 18px 0 2px; }
+  p, li { margin: 6px 0; }
+  ul { padding-left: 1.2em; }
+  .muted { color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
 </style>
 </head>
 <body>
 <main>
-  <h1>拍书 BookFlat · 支持 / Support</h1>
-  <section lang="zh-Hans">
-    <h2>需要帮助？</h2>
+  <header>
+    <svg class="mark" viewBox="0 0 52 52" aria-hidden="true">
+      <rect width="52" height="52" rx="13" fill="#c23a22"/>
+      <g fill="none" stroke="#fbf3e6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 15V9h6M37 9h6v6M43 37v6h-6M15 43H9v-6"/>
+      </g>
+      <rect x="13" y="17" width="12.5" height="18" rx="1.5" fill="#fffbf3"/>
+      <rect x="26.5" y="17" width="12.5" height="18" rx="1.5" fill="#fffbf3"/>
+      <g stroke="#d9b9a6" stroke-width="1.4" stroke-linecap="round">
+        <path d="M15.5 21.5h7M15.5 25h7M15.5 28.5h5M29 21.5h7.5M29 25h7.5M29 28.5h5"/>
+      </g>
+    </svg>
+    <div>
+      <h1>拍书 BookFlat 支持</h1>
+      <p class="sub">常见问题与反馈 / FAQ &amp; Feedback</p>
+    </div>
+  </header>
+
+  <nav aria-label="Language">
+    <a href="#zh-hans">简体中文</a>
+    <a href="#en">English</a>
+    <a href="#zh-hant">繁體中文</a>
+    <a href="#ja">日本語</a>
+  </nav>
+
+  <section id="zh-hans" lang="zh-Hans">
+    <h2>简体中文</h2>
+    <h3>需要帮助？</h3>
     <p>遇到问题、识别不准，或有功能建议，请在这里留言：<a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub Issues</a>。请不要附上含有真实个人信息的照片或截图。</p>
-    <h2>常见问题</h2>
+    <h3>常见问题</h3>
     <p><strong>书页和文字会上传吗？</strong> 不会。拍摄、裁剪、文字识别都在 iPhone 上完成，开飞行模式也能用。</p>
     <p><strong>双页书怎么拆成两页？</strong> 拍摄时选「书本」模式，把书脊对准中线；在「展平与裁剪」页打开「拆分双页」即可。</p>
     <p><strong>识别出的文字在哪里？</strong> 打开文档，点底部的「识字」，或点开某一页后切换到「文本」，可以一键复制。</p>
@@ -29,11 +69,14 @@
     <p><strong>怎么恢复购买？</strong> 首页右上角「设置」→「恢复购买」。</p>
     <p><strong>试用到期会扣款吗？</strong> 不会。7 天试用结束后不会自动扣款，需要你主动购买才会永久解锁。</p>
     <p><strong>删除 App 后文档还在吗？</strong> 不在。文档只保存在本机，删除前请先导出需要保留的内容。</p>
-    <p><a href="../privacy/">隐私政策</a></p>
+    <p><a href="../privacy/#zh-hans">隐私政策</a></p>
   </section>
-  <section lang="en">
-    <h2>Need help?</h2>
-    <p>For problems, recognition issues or feature requests, please open an issue on <a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub</a>. Please don't attach photos or screenshots that contain real personal information.</p>
+
+  <section id="en" lang="en">
+    <h2>English</h2>
+    <h3>Need help?</h3>
+    <p>For problems, recognition issues or feature requests, please open an issue on <a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub</a>. Please don’t attach photos or screenshots that contain real personal information.</p>
+    <h3>FAQ</h3>
     <p><strong>Are my pages or text uploaded?</strong> No. Capturing, cropping and text recognition all run on your iPhone, even in Airplane Mode.</p>
     <p><strong>How do I split a two-page spread?</strong> Use Book mode and line the spine up with the center guide, then turn on “Split pages” on the crop screen.</p>
     <p><strong>Where is the recognized text?</strong> Open a document and tap “Text” at the bottom, or open a page and switch to the Text tab. You can copy it all at once.</p>
@@ -43,7 +86,38 @@
     <p><strong>Are my documents kept if I delete the app?</strong> No. Documents are stored only on your device, so export anything you want to keep first.</p>
     <p><a href="../privacy/#en">Privacy Policy</a></p>
   </section>
-  <p class="muted">© 2026 BookFlat</p>
+
+  <section id="zh-hant" lang="zh-Hant">
+    <h2>繁體中文</h2>
+    <h3>需要協助？</h3>
+    <p>遇到問題、辨識不準，或有功能建議，請在這裡留言：<a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub Issues</a>。請不要附上含有真實個人資訊的照片或截圖。</p>
+    <h3>常見問題</h3>
+    <p><strong>書頁和文字會上傳嗎？</strong> 不會。拍攝、裁切、文字辨識都在 iPhone 上完成，開啟飛航模式也能使用。</p>
+    <p><strong>雙頁書怎麼拆成兩頁？</strong> 拍攝時選「書本」模式，把書脊對準中線；在「展平與裁切」頁開啟「拆分雙頁」即可。</p>
+    <p><strong>辨識出的文字在哪裡？</strong> 打開文件，點底部的「識字」，或點開某一頁後切換到「文字」，可以一鍵複製。</p>
+    <p><strong>匯出的 PDF 為什麼有浮水印？</strong> 免費版匯出會帶一行「拍書」小浮水印。試用期間或永久解鎖後，匯出不帶浮水印，並可產生可搜尋 PDF、匯出 TXT。</p>
+    <p><strong>怎麼回復購買？</strong> 首頁右上角「設定」→「回復購買」。</p>
+    <p><strong>試用到期會扣款嗎？</strong> 不會。7 天試用結束後不會自動扣款，需要你主動購買才會永久解鎖。</p>
+    <p><strong>刪除 App 後文件還在嗎？</strong> 不在。文件只儲存在本機，刪除前請先匯出需要保留的內容。</p>
+    <p><a href="../privacy/#zh-hant">隱私政策</a></p>
+  </section>
+
+  <section id="ja" lang="ja">
+    <h2>日本語</h2>
+    <h3>お困りですか？</h3>
+    <p>不具合、認識の精度、機能のご要望などは <a href="https://github.com/maple-dawn/maple-dawn.github.io/issues">GitHub Issues</a> からお寄せください。実在の個人情報が写った写真やスクリーンショットは添付しないでください。</p>
+    <h3>よくある質問</h3>
+    <p><strong>ページや文字はアップロードされますか？</strong> いいえ。撮影・トリミング・文字認識はすべて iPhone 上で行われ、機内モードでも使えます。</p>
+    <p><strong>見開きページを 2 ページに分けるには？</strong> 撮影時に「本」モードを選び、ノドを中央のガイドに合わせます。「補正とトリミング」画面で「見開きを分割」をオンにしてください。</p>
+    <p><strong>認識した文字はどこにありますか？</strong> 書類を開いて下部の「テキスト」をタップするか、ページを開いて「テキスト」タブに切り替えると、まとめてコピーできます。</p>
+    <p><strong>書き出した PDF に透かしが入るのはなぜ？</strong> 無料版では小さな「BookFlat」の透かしが入ります。お試し期間中または買い切りで解除すると透かしはなくなり、検索可能な PDF や TXT も書き出せます。</p>
+    <p><strong>購入を復元するには？</strong> ホーム画面右上の「設定」→「購入を復元」をタップしてください。</p>
+    <p><strong>お試し期間が終わると課金されますか？</strong> いいえ。7 日間のお試しが終わっても自動で課金されることはありません。</p>
+    <p><strong>アプリを削除すると書類はどうなりますか？</strong> 書類は端末内にのみ保存されているため、削除されます。残したいものは先に書き出してください。</p>
+    <p><a href="../privacy/#ja">プライバシーポリシー</a></p>
+  </section>
+
+  <p class="muted">© 2026 BookFlat · <a href="../privacy/">隐私政策 Privacy</a></p>
 </main>
 </body>
 </html>

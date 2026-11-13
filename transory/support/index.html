@@ -1,44 +1,113 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Transory for iPhone 支持 · Support</title>
+<title>Transory for iPhone · 支持 Support</title>
+<meta name="description" content="Transory for iPhone 支持页面：常见问题与反馈渠道。">
 <style>
-  :root { --bg: #ffffff; --fg: #1c1c1e; --muted: #6c6c70; --line: #e5e5ea; --accent: #4b5bff; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #000000; --fg: #f2f2f7; --muted: #a1a1a6; --line: #2c2c2e; --accent: #7c88ff; } }
-  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 -apple-system, "PingFang SC", system-ui, sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-  h1 { font-size: 28px; margin: 0 0 12px; }
-  h2 { font-size: 19px; margin: 28px 0 6px; }
+  :root { --fg:#1c1c1e; --muted:#6c6c70; --bg:#f4f5fb; --card:#fff; --accent:#4b5bff; --line:#e3e5f0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --muted:#a1a1a6; --bg:#0d0e14; --card:#1b1c24; --accent:#7c88ff; --line:#2c2e3a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", "Noto Sans CJK", "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom: 20px; }
+  .mark { width:52px; height:52px; border-radius:13px; flex-shrink:0; display:block; }
+  h1 { font-size: 24px; margin:0; line-height:1.3; }
+  .sub { color:var(--muted); font-size:14px; margin:2px 0 0; }
+  nav { display:flex; flex-wrap:wrap; gap:8px; margin: 8px 0 24px; }
+  nav a { color:var(--accent); text-decoration:none; font-size:14px; padding:6px 12px; border:1px solid var(--line);
+    border-radius:999px; background:var(--card); }
+  section { background:var(--card); border-radius:16px; padding: 8px 22px 18px; margin-bottom: 20px; }
+  h2 { font-size: 20px; margin: 18px 0 4px; }
+  h3 { font-size: 16px; margin: 18px 0 2px; }
   p, li { margin: 6px 0; }
-  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+  ul { padding-left: 1.2em; }
+  .muted { color: var(--muted); font-size: 14px; }
   a { color: var(--accent); }
-  .lang { text-align: right; font-size: 14px; margin: 0 0 16px; }
 </style>
 </head>
 <body>
 <main>
-<p class="lang"><a href="#zh">简体中文</a></p>
-<h1>Transory for iPhone Support</h1>
-<p>For questions or feedback, open an issue on <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a> and mention the iPhone app, your iOS version, and the AI service you use.</p>
-<p><strong>How much does it cost?</strong> Transory is free to download and every feature is free for 7 days, with no automatic charge when the trial ends. After that, a one-time US$1.99 purchase unlocks it forever—no subscription. If you bought version 1.0, you already have full access; use Restore Purchases if needed. Translations use your own API key and are billed by the AI provider.</p>
-<p><strong>Where do I get an API key?</strong> From the developer console of DeepSeek, Anthropic (Claude), Google AI Studio (Gemini), or OpenAI. Enter it in Settings › Model Services.</p>
-<p><strong>Who receives my text?</strong> Only the providers you authorize. See the <a href="../privacy/">Privacy Policy</a>.</p>
+  <header>
+    <svg class="mark" viewBox="0 0 52 52" aria-hidden="true">
+      <rect width="52" height="52" rx="13" fill="#4b5bff"/>
+      <rect x="9" y="11" width="22" height="18" rx="5" fill="#ffffff"/>
+      <path d="M14 29l-1 6 7-6z" fill="#ffffff"/>
+      <rect x="21" y="23" width="22" height="18" rx="5" fill="#c9cfff"/>
+      <path d="M38 41l1 5-7-5z" fill="#c9cfff"/>
+      <path d="M15 24l5-9 5 9M16.8 21h6.4" fill="none" stroke="#4b5bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M27 28h10M32 26v2M29.5 28c.8 3.5 3.5 6 7 7.5M34.5 28c-.8 3.5-3.5 6-7 7.5" fill="none" stroke="#2b38c9" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <h1>Transory for iPhone 支持</h1>
+      <p class="sub">常见问题与反馈 / FAQ &amp; Feedback</p>
+    </div>
+  </header>
 
-<hr>
+  <nav aria-label="Language">
+    <a href="#zh-hans">简体中文</a>
+    <a href="#en">English</a>
+    <a href="#zh-hant">繁體中文</a>
+    <a href="#ja">日本語</a>
+  </nav>
 
-<section id="zh" lang="zh-CN">
-<h1>Transory for iPhone 支持</h1>
-<p>遇到问题或有建议，请在 <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a> 提交，注明是 iPhone 版、系统版本和使用的 AI 服务。</p>
+  <section id="zh-hans" lang="zh-Hans">
+    <h2>简体中文</h2>
+    <h3>需要帮助？</h3>
+    <p>遇到问题或有建议，请在 <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a> 提交，注明是 iPhone 版、系统版本和使用的 AI 服务。</p>
+    <h3>常见问题</h3>
+    <p><strong>怎么收费？</strong> 免费下载，全部功能可免费试用 7 天，到期不会自动扣费；之后 US$1.99 一次性永久解锁，没有订阅。购买过 1.0 的用户无需再付费，必要时点「恢复购买」。翻译使用你自己的 API Key，用量费用由对应的 AI 服务商按其价格向你收取。</p>
+    <p><strong>在哪里获取 API Key？</strong> 在 DeepSeek、Anthropic（Claude）、Google AI Studio（Gemini）或 OpenAI 的开发者平台注册后创建，然后在「设置 › 模型服务」中填写。</p>
+    <p><strong>提示「尚未填写 API Key」或请求失败？</strong> 检查 Key 是否正确、账户是否有余额，以及模型名是否可用。可以在服务详情中点「从服务商获取模型列表」验证。</p>
+    <p><strong>怎么用电脑上的本地模型？</strong> 在电脑上运行 Ollama 或 LM Studio 并允许局域网访问，在 App 中添加对应服务，把接口地址改成电脑的局域网 IP，例如 http://192.168.1.2:11434/v1。</p>
+    <p><strong>我的数据会发给谁？</strong> 只发给你授权的服务商。详见下方的隐私政策。</p>
+    <p><a href="../privacy/#zh-hans">隐私政策</a></p>
+  </section>
 
-<h2>常见问题</h2>
-<p><strong>怎么收费？</strong>免费下载，全部功能可免费试用 7 天，到期不会自动扣费；之后 US$1.99 一次性永久解锁，没有订阅。购买过 1.0 的用户无需再付费，必要时点「恢复购买」。翻译使用你自己的 API Key，用量费用由对应的 AI 服务商按其价格向你收取。</p>
-<p><strong>在哪里获取 API Key？</strong>在 DeepSeek、Anthropic（Claude）、Google AI Studio（Gemini）或 OpenAI 的开发者平台注册后创建，然后在「设置 › 模型服务」中填写。</p>
-<p><strong>提示「尚未填写 API Key」或请求失败？</strong>检查 Key 是否正确、账户是否有余额，以及模型名是否可用。可以在服务详情中点「从服务商获取模型列表」验证。</p>
-<p><strong>怎么用电脑上的本地模型？</strong>在电脑上运行 Ollama 或 LM Studio 并允许局域网访问，在 App 中添加对应服务，把接口地址改成电脑的局域网 IP，例如 http://192.168.1.2:11434/v1。</p>
-<p><strong>我的数据会发给谁？</strong>只发给你授权的服务商。详见 <a href="../privacy/">隐私政策</a>。</p>
-</section>
+  <section id="en" lang="en">
+    <h2>English</h2>
+    <h3>Need help?</h3>
+    <p>For questions or feedback, open an issue on <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a> and mention the iPhone app, your iOS version, and the AI service you use.</p>
+    <h3>FAQ</h3>
+    <p><strong>How much does it cost?</strong> Transory is free to download and every feature is free for 7 days, with no automatic charge when the trial ends. After that, a one-time US$1.99 purchase unlocks it forever—no subscription. If you bought version 1.0, you already have full access; use Restore Purchases if needed. Translations use your own API key and are billed by the AI provider.</p>
+    <p><strong>Where do I get an API key?</strong> From the developer console of DeepSeek, Anthropic (Claude), Google AI Studio (Gemini), or OpenAI. Enter it in Settings › Model Services.</p>
+    <p><strong>It says “No API key” or requests fail?</strong> Check that the key is correct, your account has credit, and the model name is available. In the service details, tap “Fetch models from provider” to verify.</p>
+    <p><strong>How do I use a local model on my computer?</strong> Run Ollama or LM Studio on your computer with LAN access enabled, add the matching service in the app, and set the endpoint to your computer’s LAN IP, e.g. http://192.168.1.2:11434/v1.</p>
+    <p><strong>Who receives my text?</strong> Only the providers you authorize. See the Privacy Policy below.</p>
+    <p><a href="../privacy/#en">Privacy Policy</a></p>
+  </section>
+
+  <section id="zh-hant" lang="zh-Hant">
+    <h2>繁體中文</h2>
+    <h3>需要協助？</h3>
+    <p>遇到問題或有建議，請在 <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a> 提交，註明是 iPhone 版、系統版本和使用的 AI 服務。</p>
+    <h3>常見問題</h3>
+    <p><strong>怎麼收費？</strong> 免費下載，全部功能可免費試用 7 天，到期不會自動扣費；之後 US$1.99 一次性永久解鎖，沒有訂閱。購買過 1.0 的使用者無需再付費，必要時點「回復購買」。翻譯使用你自己的 API Key，用量費用由對應的 AI 服務商依其價格向你收取。</p>
+    <p><strong>在哪裡取得 API Key？</strong> 在 DeepSeek、Anthropic（Claude）、Google AI Studio（Gemini）或 OpenAI 的開發者平台註冊後建立，然後在「設定 › 模型服務」中填寫。</p>
+    <p><strong>提示「尚未填寫 API Key」或請求失敗？</strong> 檢查 Key 是否正確、帳戶是否有餘額，以及模型名稱是否可用。可以在服務詳情中點「從服務商取得模型列表」驗證。</p>
+    <p><strong>怎麼使用電腦上的本機模型？</strong> 在電腦上執行 Ollama 或 LM Studio 並允許區域網路存取，在 App 中新增對應服務，把介面位址改成電腦的區域網路 IP，例如 http://192.168.1.2:11434/v1。</p>
+    <p><strong>我的資料會傳給誰？</strong> 只傳給你授權的服務商。詳見下方的隱私政策。</p>
+    <p><a href="../privacy/#zh-hant">隱私政策</a></p>
+  </section>
+
+  <section id="ja" lang="ja">
+    <h2>日本語</h2>
+    <h3>お困りですか？</h3>
+    <p>ご質問やご意見は <a href="https://github.com/maple-dawn/Transory/issues">GitHub Issues</a> からお寄せください。iPhone 版であること、iOS のバージョン、使用している AI サービスを書き添えてください。</p>
+    <h3>よくある質問</h3>
+    <p><strong>料金はいくらですか？</strong> ダウンロードは無料で、すべての機能を 7 日間無料でお試しいただけます。期間終了時に自動で課金されることはありません。その後は US$1.99 の買い切りで永久に解除でき、サブスクリプションはありません。バージョン 1.0 をご購入済みの方は追加料金不要です。必要に応じて「購入を復元」をタップしてください。翻訳にはご自身の API キーを使用し、利用料金は各 AI サービス提供元から請求されます。</p>
+    <p><strong>API キーはどこで取得できますか？</strong> DeepSeek、Anthropic（Claude）、Google AI Studio（Gemini）、OpenAI の開発者コンソールで作成し、「設定 › モデルサービス」に入力してください。</p>
+    <p><strong>「API キーが未入力」と表示される、またはリクエストが失敗する</strong> キーが正しいか、アカウントに残高があるか、モデル名が利用可能かを確認してください。サービスの詳細画面で「提供元からモデル一覧を取得」をタップすると確認できます。</p>
+    <p><strong>パソコン上のローカルモデルを使うには？</strong> パソコンで Ollama または LM Studio を起動して LAN からのアクセスを許可し、アプリで対応するサービスを追加して、エンドポイントをパソコンの LAN IP（例：http://192.168.1.2:11434/v1）に変更してください。</p>
+    <p><strong>テキストは誰に送られますか？</strong> あなたが許可した提供元だけです。詳しくは下記のプライバシーポリシーをご覧ください。</p>
+    <p><a href="../privacy/#ja">プライバシーポリシー</a></p>
+  </section>
+
+  <p class="muted">© 2026 Transory · <a href="../privacy/">隐私政策 Privacy</a></p>
 </main>
 </body>
 </html>
