@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masaic — Auto Blur Screenshots</title>
+<meta name="description" content="Masaic finds private info in your screenshots and hides it in one tap — entirely on your iPhone.">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0e10" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 52 52&quot;%3E %3Crect width=&quot;52&quot; height=&quot;52&quot; rx=&quot;13&quot; fill=&quot;#1e5bff&quot;/%3E %3Cg fill=&quot;#ffffff&quot;%3E %3Crect x=&quot;11&quot; y=&quot;11&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot;/%3E%3Crect x=&quot;21.5&quot; y=&quot;11&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot; opacity=&quot;.55&quot;/%3E%3Crect x=&quot;32&quot; y=&quot;11&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot;/%3E %3Crect x=&quot;11&quot; y=&quot;21.5&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot; opacity=&quot;.55&quot;/%3E%3Crect x=&quot;21.5&quot; y=&quot;21.5&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot;/%3E%3Crect x=&quot;32&quot; y=&quot;21.5&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot; opacity=&quot;.55&quot;/%3E %3Crect x=&quot;11&quot; y=&quot;32&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot;/%3E%3Crect x=&quot;21.5&quot; y=&quot;32&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot; opacity=&quot;.55&quot;/%3E%3Crect x=&quot;32&quot; y=&quot;32&quot; width=&quot;9&quot; height=&quot;9&quot; rx=&quot;2&quot;/%3E %3C/g%3E %3C/svg%3E">
+<link rel="stylesheet" href="../assets/landing.css">
+<style>
+  :root { --accent: #1e5bff; --accent-soft: #e3eaff; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #6f95ff; --accent-soft: #17224a; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#e8642c"/><path d="M32 12l5 10 8-4-2 10 9 2-8 7 4 6-9-1-1 10-6-5-6 5-1-10-9 1 4-6-8-7 9-2-2-10 8 4z" fill="#fff"/></svg> maple-dawn</a>
+    <div class="nav-r">
+      <a href="../#apps" data-i18n="nav.more">More apps</a>
+      <label class="lang">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <span id="lang-label">EN</span>
+        <select id="lang" aria-label="Language"><option value="en">English</option></select>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="hero">
+    <svg class="hero-icon" viewBox="0 0 52 52" aria-hidden="true">
+          <rect width="52" height="52" rx="13" fill="#1e5bff"/>
+          <g fill="#ffffff">
+            <rect x="11" y="11" width="9" height="9" rx="2"/><rect x="21.5" y="11" width="9" height="9" rx="2" opacity=".55"/><rect x="32" y="11" width="9" height="9" rx="2"/>
+            <rect x="11" y="21.5" width="9" height="9" rx="2" opacity=".55"/><rect x="21.5" y="21.5" width="9" height="9" rx="2"/><rect x="32" y="21.5" width="9" height="9" rx="2" opacity=".55"/>
+            <rect x="11" y="32" width="9" height="9" rx="2"/><rect x="21.5" y="32" width="9" height="9" rx="2" opacity=".55"/><rect x="32" y="32" width="9" height="9" rx="2"/>
+          </g>
+        </svg>
+    <p class="app-name">Masaic</p>
+    <h1 data-i18n="tagline">Hide private info in one tap.</h1>
+    <p class="intro" data-i18n="intro">Masaic checks your screenshots for faces, emails, card numbers, tracking numbers, QR codes and more, then masks them in one tap. Everything happens on your iPhone, and nothing is uploaded.</p>
+    <div class="cta">
+      <a class="store" href="https://apps.apple.com/app/id6831443640">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
+        <span data-i18n="cta.download">Download on the App Store</span>
+      </a>
+    </div>
+    <p class="meta"><span data-i18n="meta.free">Free download</span> · iPhone · iPad</p>
+  </header>
+
+  <section>
+    <h2 data-i18n="sec.features">Features</h2>
+    <div class="features">
+      <div class="feature">
+        <span class="n">01</span>
+        <h3 data-i18n="f1.t">Finds it for you</h3>
+        <p data-i18n="f1.d">Faces, email addresses, bank card numbers, tracking numbers, QR codes, barcodes, IP addresses, chat avatars and nicknames. Review what it found and skip anything you want to keep.</p>
+      </div>
+      <div class="feature">
+        <span class="n">02</span>
+        <h3 data-i18n="f2.t">Mask it your way</h3>
+        <p data-i18n="f2.d">Pixelate, blur, marker, emoji, or Hide Text, which fills text with the surrounding background and leaves no trace.</p>
+      </div>
+      <div class="feature">
+        <span class="n">03</span>
+        <h3 data-i18n="f3.t">Precise by hand</h3>
+        <p data-i18n="f3.d">Tap a line to mask it, or draw a box around anything. Adjust the strength and set your default style.</p>
+      </div>
+      <div class="feature">
+        <span class="n">04</span>
+        <h3 data-i18n="f4.t">Watermark your ID</h3>
+        <p data-i18n="f4.d">Cover ID cards and passports with a watermark like “For rental application only” so they can’t be reused.</p>
+      </div>
+      <div class="feature">
+        <span class="n">05</span>
+        <h3 data-i18n="f5.t">Clean metadata</h3>
+        <p data-i18n="f5.d">Location, camera model and other EXIF data are removed when you share.</p>
+      </div>
+      <div class="feature">
+        <span class="n">06</span>
+        <h3 data-i18n="f6.t">Right from the Share menu</h3>
+        <p data-i18n="f6.d">Mask an image straight from the Share menu in Photos or any other app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="privacy">
+      <h2 data-i18n="sec.privacy">Private by design</h2>
+      <p data-i18n="privacy">Detection runs entirely on device and works in Airplane Mode. No accounts, no analytics, no tracking — your images never leave your iPhone.</p>
+    </div>
+    <div class="pricing">
+      <h2 data-i18n="sec.pricing">Pricing</h2>
+      <p data-i18n="pricing">Try every feature free for 7 days, then unlock forever with a one-time purchase. No subscription and no automatic charge. Manual selection, solid blocks and EXIF removal stay free.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="privacy/#en" data-anchor data-i18n="link.privacy">Privacy Policy</a>
+    <a href="support/#en" data-anchor data-i18n="link.support">Support</a>
+    <span class="copy">© <span id="y">2026</span> maple-dawn · <span data-i18n="footer">Made with care.</span></span>
+  </div>
+</footer>
+<script src="../assets/i18n-core.js"></script>
+<script src="i18n.js"></script>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+MapleI18n.init();
+</script>
+</body>
+</html>

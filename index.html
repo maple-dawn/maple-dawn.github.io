@@ -61,7 +61,12 @@
          box-shadow: var(--shadow); display: flex; flex-direction: column; transition: transform .2s, background .2s; }
   .app:hover { transform: translateY(-2px); background: var(--card-hover); }
   .app .icon { width: 60px; height: 60px; border-radius: 14px; display: block; margin-bottom: 16px; }
+  .app { position: relative; }
   .app h3 { margin: 0; font-size: 19px; letter-spacing: -.01em; }
+  .app h3 a { text-decoration: none; }
+  .app h3 a::after { content: ""; position: absolute; inset: 0; border-radius: 20px; }
+  .app h3 a:focus-visible::after { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .links { position: relative; z-index: 1; }
   .app .tag { color: var(--muted); font-size: 13px; margin: 2px 0 12px; }
   .app p { margin: 0 0 18px; font-size: 15px; flex: 1; }
   .links { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -129,24 +134,7 @@
         <label class="lang">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
           <span id="lang-label">EN</span>
-          <select id="lang" aria-label="Language">
-            <option value="en">English</option>
-            <option value="zh-Hans">简体中文</option>
-            <option value="zh-Hant">繁體中文</option>
-            <option value="ja">日本語</option>
-            <option value="ko">한국어</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
-            <option value="it">Italiano</option>
-            <option value="ru">Русский</option>
-            <option value="tr">Türkçe</option>
-            <option value="vi">Tiếng Việt</option>
-            <option value="th">ไทย</option>
-            <option value="id">Bahasa Indonesia</option>
-            <option value="ar">العربية</option>
-          </select>
+          <select id="lang" aria-label="Language"><option value="en">English</option></select>
         </label>
       </li>
     </ul>
@@ -173,12 +161,13 @@
             <rect x="11" y="32" width="9" height="9" rx="2"/><rect x="21.5" y="32" width="9" height="9" rx="2" opacity=".55"/><rect x="32" y="32" width="9" height="9" rx="2"/>
           </g>
         </svg>
-        <h3 data-i18n="masaic.name">Masaic</h3>
+        <h3><a href="masaic/" data-i18n="masaic.name">Masaic</a></h3>
         <div class="tag" data-i18n="masaic.tag">Screenshot redaction · iPhone</div>
         <p data-i18n="masaic.desc">Automatically finds private info in screenshots and redacts it in one tap. Everything runs on your iPhone — it even works in Airplane Mode.</p>
         <div class="links">
-          <a href="masaic/privacy/#en" data-i18n="link.privacy">Privacy Policy</a>
-          <a href="masaic/support/#en" data-i18n="link.support">Support</a>
+          <a href="https://apps.apple.com/app/id6831443640">App Store</a>
+          <a href="masaic/privacy/#en" data-anchor data-i18n="link.privacy">Privacy Policy</a>
+          <a href="masaic/support/#en" data-anchor data-i18n="link.support">Support</a>
         </div>
       </article>
 
@@ -194,12 +183,13 @@
             <path d="M15.5 21.5h7M15.5 25h7M15.5 28.5h5M29 21.5h7.5M29 25h7.5M29 28.5h5"/>
           </g>
         </svg>
-        <h3 data-i18n="bookflat.name">BookFlat</h3>
+        <h3><a href="bookflat/" data-i18n="bookflat.name">BookFlat</a></h3>
         <div class="tag" data-i18n="bookflat.tag">Book scanning · Flattening · OCR</div>
         <p data-i18n="bookflat.desc">Snap a book page and it flattens and crops it, splits two-page spreads, recognizes the text and exports a PDF. All done on your iPhone — pages are never uploaded.</p>
         <div class="links">
-          <a href="bookflat/privacy/#en" data-i18n="link.privacy">Privacy Policy</a>
-          <a href="bookflat/support/#en" data-i18n="link.support">Support</a>
+          <a href="https://apps.apple.com/app/id6832481228">App Store</a>
+          <a href="bookflat/privacy/#en" data-anchor data-i18n="link.privacy">Privacy Policy</a>
+          <a href="bookflat/support/#en" data-anchor data-i18n="link.support">Support</a>
         </div>
       </article>
 
@@ -213,12 +203,13 @@
           <path d="M15 24l5-9 5 9M16.8 21h6.4" fill="none" stroke="#4b5bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M27 28h10M32 26v2M29.5 28c.8 3.5 3.5 6 7 7.5M34.5 28c-.8 3.5-3.5 6-7 7.5" fill="none" stroke="#2b38c9" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
-        <h3 data-i18n="transory.name">Transory</h3>
+        <h3><a href="transory/" data-i18n="transory.name">Transory</a></h3>
         <div class="tag" data-i18n="transory.tag">AI translation · Live interpreting · iPhone</div>
         <p data-i18n="transory.desc">Translate with DeepSeek, Claude, Gemini or OpenAI using your own API key. There's no developer server — your text goes only to the provider you choose.</p>
         <div class="links">
-          <a href="transory/privacy/#en" data-i18n="link.privacy">Privacy Policy</a>
-          <a href="transory/support/#en" data-i18n="link.support">Support</a>
+          <a href="https://apps.apple.com/app/id6827446402">App Store</a>
+          <a href="transory/privacy/#en" data-anchor data-i18n="link.privacy">Privacy Policy</a>
+          <a href="transory/support/#en" data-anchor data-i18n="link.support">Support</a>
         </div>
       </article>
 
@@ -228,12 +219,12 @@
           <path d="M26 11c1.2 4.6 7.5 8.4 7.5 15.6a7.5 7.5 0 0 1-15 0c0-3.6 1.7-5.6 3.4-7.4.3 2.5 1.4 3.9 2.8 4.5-.4-4.6 0-9 1.3-12.7z" fill="#fff"/>
           <rect x="16" y="38" width="20" height="3" rx="1.5" fill="#fff"/>
         </svg>
-        <h3 data-i18n="ember.name">Ember for Hacker News</h3>
+        <h3><a href="ember/" data-i18n="ember.name">Ember for Hacker News</a></h3>
         <div class="tag" data-i18n="ember.tag">Hacker News reader · iPhone / iPad</div>
         <p data-i18n="ember.desc">A calm, fast Hacker News reader with collapsible threads, offline reading and on-device AI summaries. No account, no tracking.</p>
         <div class="links">
-          <a href="ember/privacy/#en" data-i18n="link.privacy">Privacy Policy</a>
-          <a href="ember/support/#en" data-i18n="link.support">Support</a>
+          <a href="ember/privacy/#en" data-anchor data-i18n="link.privacy">Privacy Policy</a>
+          <a href="ember/support/#en" data-anchor data-i18n="link.support">Support</a>
         </div>
       </article>
 
@@ -247,23 +238,24 @@
           <rect x="21.7" y="32.1" width="8.5" height="8.5" rx="2.3" fill="#7dd3fc"/>
           <rect x="32.1" y="32.1" width="8.5" height="8.5" rx="2.3" fill="#f9a8d4"/>
         </svg>
-        <h3 data-i18n="classora.name">Classora</h3>
+        <h3><a href="classora/" data-i18n="classora.name">Classora</a></h3>
         <div class="tag" data-i18n="classora.tag">Class timetable · Widgets · iPhone</div>
         <p data-i18n="classora.desc">See today's and this week's classes at a glance. Handles Week A/B, one-off room changes and cancellations, and holiday make-up days; reminds you before class and shows a Lock Screen countdown. Your timetable stays only on your iPhone.</p>
         <div class="links">
-          <a href="classora/privacy/#en" data-i18n="link.privacy">Privacy Policy</a>
-          <a href="classora/support/#en" data-i18n="link.support">Support</a>
+          <a href="https://apps.apple.com/app/id6835274441">App Store</a>
+          <a href="classora/privacy/#en" data-anchor data-i18n="link.privacy">Privacy Policy</a>
+          <a href="classora/support/#en" data-anchor data-i18n="link.support">Support</a>
         </div>
       </article>
 
       <article class="app">
         <img class="icon" src="doodlefox/icon.png" alt="" width="60" height="60">
-        <h3 data-i18n="doodlefox.name">Doodle Fox</h3>
+        <h3><a href="doodlefox/" data-i18n="doodlefox.name">Doodle Fox</a></h3>
         <div class="tag" data-i18n="doodlefox.tag">Kids' coloring · iPhone · iPad</div>
         <p data-i18n="doodlefox.desc">A coloring book for little hands: pick a color, tap, and it fills — always inside the lines. Free Animals pack, no ads, and a grown-up gate for purchases and sharing. Pictures stay on your device.</p>
         <div class="links">
-          <a href="doodlefox/privacy/#en" data-i18n="link.privacy">Privacy Policy</a>
-          <a href="doodlefox/support/#en" data-i18n="link.support">Support</a>
+          <a href="doodlefox/privacy/#en" data-anchor data-i18n="link.privacy">Privacy Policy</a>
+          <a href="doodlefox/support/#en" data-anchor data-i18n="link.support">Support</a>
         </div>
       </article>
 
@@ -311,60 +303,11 @@
 <footer>
   <div class="wrap">© <span id="y">2026</span> maple-dawn · <span data-i18n="footer">Made with care.</span></div>
 </footer>
+<script src="assets/i18n-core.js"></script>
 <script src="i18n.js"></script>
 <script>
 document.getElementById('y').textContent = new Date().getFullYear();
-
-(function () {
-  var I18N = window.I18N || {};
-  var LABEL = { en: 'EN', 'zh-Hans': '简', 'zh-Hant': '繁', ja: '日', ko: '한', fr: 'FR', de: 'DE', es: 'ES',
-                pt: 'PT', it: 'IT', ru: 'RU', tr: 'TR', vi: 'VI', th: 'TH', id: 'ID', ar: 'AR' };
-  // Product sub-pages only carry these four languages; everything else links to English.
-  var ANCHOR = { en: 'en', 'zh-Hans': 'zh-hans', 'zh-Hant': 'zh-hant', ja: 'ja' };
-  var RTL = { ar: true };
-  var nodes = document.querySelectorAll('[data-i18n]');
-  var descMeta = document.querySelector('meta[name="description"]');
-
-  // English is the markup itself; capture it so switching back works.
-  var en = { _title: document.title, _desc: descMeta.content };
-  nodes.forEach(function (el) { en[el.getAttribute('data-i18n')] = el.innerHTML; });
-  I18N.en = en;
-
-  function apply(lang) {
-    var dict = I18N[lang] || en;
-    document.documentElement.lang = lang;
-    document.documentElement.dir = RTL[lang] ? 'rtl' : 'ltr';
-    document.title = dict._title;
-    descMeta.content = dict._desc;
-    nodes.forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      el.innerHTML = dict[key] != null ? dict[key] : en[key];
-    });
-    document.querySelectorAll('.links a').forEach(function (a) {
-      a.setAttribute('href', a.getAttribute('href').split('#')[0] + '#' + (ANCHOR[lang] || 'en'));
-    });
-    document.getElementById('lang-label').textContent = LABEL[lang];
-    document.getElementById('lang').value = lang;
-  }
-
-  function store(lang) { try { localStorage.setItem('lang', lang); } catch (e) {} }
-  function saved() { try { return localStorage.getItem('lang'); } catch (e) { return null; } }
-
-  var params = new URLSearchParams(location.search);
-  var lang = params.get('lang');
-  if (!LABEL[lang]) lang = saved();
-  if (!LABEL[lang]) lang = 'en';
-  apply(lang);
-
-  document.getElementById('lang').addEventListener('change', function (e) {
-    var next = e.target.value;
-    apply(next);
-    store(next);
-    var url = new URL(location.href);
-    if (next === 'en') url.searchParams.delete('lang'); else url.searchParams.set('lang', next);
-    history.replaceState(null, '', url);
-  });
-})();
+MapleI18n.init();
 </script>
 </body>
 </html>

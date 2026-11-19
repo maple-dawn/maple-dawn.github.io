@@ -1,0 +1,90 @@
+/* Shared styles for app landing pages. Each page sets --accent / --accent-soft (light and dark). */
+:root {
+  --bg: #f6f5f2; --fg: #17171a; --muted: #66656c; --line: #e4e2dc;
+  --card: #ffffff; --shadow: 0 1px 2px rgba(20,20,30,.04), 0 8px 24px rgba(20,20,30,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e10; --fg: #f2f2f5; --muted: #a2a1a8; --line: #26262b;
+    --card: #17171a; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+html:lang(zh-Hant) body { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans CJK TC", "Segoe UI", sans-serif; }
+html:lang(ja) body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans CJK JP", "Segoe UI", sans-serif; }
+html:lang(ko) body { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans CJK KR", "Segoe UI", sans-serif; }
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 { letter-spacing: 0; }
+a { color: inherit; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+/* Nav */
+nav { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px);
+      background: color-mix(in srgb, var(--bg) 78%, transparent); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 650; text-decoration: none; letter-spacing: -.01em; white-space: nowrap; }
+.brand svg { width: 28px; height: 28px; flex-shrink: 0; }
+.nav-r { display: flex; align-items: center; gap: 16px; font-size: 15px; }
+.nav-r > a { text-decoration: none; color: var(--muted); white-space: nowrap; }
+.nav-r > a:hover { color: var(--fg); }
+.lang { position: relative; display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 14px;
+        padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; }
+.lang:hover, .lang:focus-within { color: var(--fg); border-color: var(--muted); }
+.lang svg { width: 15px; height: 15px; }
+.lang select { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
+
+/* Hero */
+.hero { padding: 64px 0 48px; text-align: center; }
+.hero-icon { width: 112px; height: 112px; border-radius: 26px; display: block; margin: 0 auto 22px;
+             box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 30%, transparent); }
+.app-name { margin: 0 0 6px; font-weight: 650; color: var(--accent); font-size: 17px; }
+.hero h1 { font-size: clamp(32px, 6vw, 54px); line-height: 1.12; letter-spacing: -.025em; margin: 0 auto 18px; max-width: 760px; font-weight: 760; }
+.hero .intro { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0 auto 30px; }
+.cta { display: flex; justify-content: center; }
+.store { display: inline-flex; align-items: center; gap: 10px; background: var(--fg); color: var(--bg); text-decoration: none;
+         padding: 12px 22px; border-radius: 14px; font-size: 16px; font-weight: 600; transition: transform .2s; }
+.store:hover { transform: translateY(-1px); }
+.store svg { width: 20px; height: 20px; flex-shrink: 0; }
+.soon { display: inline-block; padding: 11px 20px; border-radius: 14px; font-size: 15px; font-weight: 600;
+        color: var(--accent); background: var(--accent-soft); }
+.meta { margin: 14px 0 0; color: var(--muted); font-size: 14px; }
+
+/* Sections */
+section { padding: 36px 0; }
+section h2 { font-size: 26px; letter-spacing: -.015em; margin: 0 0 22px; }
+.features { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.feature { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px; box-shadow: var(--shadow); }
+.feature .n { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; font-size: 13px; font-weight: 700;
+              color: var(--accent); background: var(--accent-soft); margin-bottom: 12px; }
+.feature h3 { margin: 0 0 6px; font-size: 17px; letter-spacing: -.01em; }
+.feature p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.band { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.band > div { border-radius: 20px; padding: 26px; }
+.band .privacy { background: var(--accent-soft); }
+.band .pricing { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.band h2 { font-size: 20px; margin: 0 0 8px; }
+.band p { margin: 0; font-size: 15.5px; }
+.band .pricing p { color: var(--muted); }
+
+footer { padding: 32px 0 56px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--fg); }
+footer .copy { margin-inline-start: auto; }
+
+@media (max-width: 560px) {
+  .hero { padding: 40px 0 32px; }
+  .hero-icon { width: 92px; height: 92px; border-radius: 21px; }
+  .hero .intro { font-size: 16px; }
+  .nav-r { gap: 12px; }
+  footer .copy { margin-inline-start: 0; width: 100%; }
+}
+/* On phones the brand already links home; drop the long "More apps" label. */
+@media (max-width: 480px) { .nav-r > a { display: none; } }
+@media (prefers-reduced-motion: reduce) { .store { transition: none; } .store:hover { transform: none; } }
